@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+.navbar {
+  position: absolute; /* fijo arriba a la derecha */
+  top: 40px; /* distancia desde arriba */
+  right: 10px; /* distancia desde la derecha */
+  width: 45vw;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  background: linear-gradient(90deg, #ff4b2b, #ff0000); /* gradiente rojo */
+  padding: 12px 25px;
+  border-radius: 20px;
+  margin: 0;
+  justify-content: space-around;
+}
+
+.navbar li {
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar li:hover {
+  opacity: 0.8;
+}
+
+.navbar li.active {
+  font-weight: 700;
+}
+.nombre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 250px 50px 50px 50px;
+  background: black;
+}
+
+.nombre-text {
+  max-width: 45%;
+}
+
+.nombre-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-left: 110px; /* lo empuja a la derecha */
+}
+
+
+.nombre-text span {
+  color: white;
+  font-size: 4rem;
+  margin-left: 50px;
+}
+
+.nombre-text p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Ajuste de imágenes */
+.autos {
+  display: flex;
+  gap: 20px;
+}
+
+.auto-card {
+  overflow: hidden;
+  border-radius: 20px;
+  width: 360px;
+  height: 260px;
+}
+
+.auto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.barra-roja {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(90deg, #ff4b2b, #ff0000);
+  position: relative;
+  border-top-right-radius: 100px;   /* redondeo arriba */
+  border-bottom-right-radius: 100px;/* redondeo abajo */
+  margin-top: 3%;
+  clip-path: polygon(
+    0 0,        /* esquina sup izq recta */
+    90% 0,      /* parte sup cerca del borde derecho */
+    85% 100%,  /* esquina inf der inclinada */
+    0 100%      /* esquina inf izq recta */
+  
+  );
+}
+
+
+
+
+  /* Explicación del clip:
+     - 0 0         → esquina superior izquierda
+     - 90% 0       → arriba casi al borde derecho
+     - 100% 100%   → esquina inferior derecha (forma diagonal)
+     - 0% 100%     → esquina inferior izquierda
+  */
+
+
