@@ -21,10 +21,10 @@ function Nombre() {
         {/* Bloque de imágenes */}
         <div className="autos">
           <div className="auto-card">
-            <img src="./public/imagenes/auto.jpg" alt="auto 1" />
+            <img src="/imagenes/auto.jpg" alt="auto 1" />
           </div>
           <div className="auto-card">
-            <img src="./public/imagenes/autodos.jpg" alt="auto 2" />
+            <img src="/imagenes/autodos.jpg" alt="auto 2" />
           </div>
         </div>
       </section>
