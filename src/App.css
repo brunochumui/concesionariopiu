@@ -16,6 +16,8 @@ body{
   top: 40px; /* distancia desde arriba */ 
   right: 10px; /* distancia desde la derecha */ 
   width: 45vw; 
+
+  z-index: 1000; /* que esté por encima de todo */
 }
 
 
@@ -111,8 +113,8 @@ body{
            
            
            .barra-roja {
-             width: 100%;
-              height: 150px; 
+             width: 90%;
+              height: 130px; 
               background: linear-gradient(90deg, #ff4b2b, #ff0000); 
 position: relative; 
 border-top-right-radius: 100px; /* redondeo arriba */
@@ -250,3 +252,72 @@ clip-path: polygon( 0 0, /* esquina sup izq recta */ 90% 0, /* parte sup cerca d
   margin-left: 40px;
 }
 
+
+/* Sección catálogos */
+.catalogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 120px 100px 0 100px; /* empuja todo debajo del navbar */
+  color: white;
+  position: relative;
+}
+
+/* Texto */
+.catalogo-texto {
+  width: 40%;
+}
+
+.catalogo-texto h3 {
+  font-size: 36px;
+  color: #e52d27;
+}
+
+.catalogo-texto h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.boton-vermas {
+  background: linear-gradient(90deg, #f72b1e, #ff0000);
+  border: none;
+  padding: 12px 30px;
+  margin-top: 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Imágenes */
+.catalogo-imagenes {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 80px;
+}
+
+.catalogo-imagenes .fila {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.catalogo-imagenes img {
+  width: 290px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Barra roja más grande */
+.barra-rojamod {
+  width: 80%;
+  height: 100px;
+  background: linear-gradient(90deg, #f72b1e, #ff0000);
+  border-radius: 10px;
+  margin-top: 60px;
+  position: absolute;
+  bottom: -130px;
+}

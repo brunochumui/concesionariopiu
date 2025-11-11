@@ -20,7 +20,7 @@ export default function SobreNosotros() {
       </div>
 
       <div className="sobre-imagen">
-        <img src="./imagenes/sobrenos.webp" alt="Auto deportivo rojo" />
+        <img src="/imagenes/sobrenos.webp" alt="Auto deportivo rojo" />
       </div>
 
       <div className="texto2">
@@ -32,5 +32,5 @@ export default function SobreNosotros() {
         </p>
       </div>
     </section>
-  );
+  )
 }
