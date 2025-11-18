@@ -1,0 +1,484 @@
+/* ------------------ GENERAL ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Contenedor principal */
+.app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* ------------------ NAVBAR ------------------ */
+
+.navbar {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  background: linear-gradient(90deg, #ff4b2b, #ff0000);
+  padding: 12px 30px;
+  border-radius: 22px;
+}
+
+.navbar li {
+  font-weight: 700;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* ------------------ BARRA ROJA UNIVERSAL ------------------ */
+
+.barra-roja {
+  width: 750px;
+  height: 82px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  border-top-right-radius: 36px;
+  position: relative;
+  margin-top: 100px;
+  left: 0;
+}
+
+
+/* ------------------ INICIO ------------------ */
+
+.nombre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 80px 80px 80px;
+}
+
+.nombre-text {
+  width: 45%;
+}
+
+.nombre-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.nombre-text span {
+  font-size: 4rem;
+}
+
+.nombre-text p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.autos {
+  display: flex;
+  gap: 25px;
+}
+
+.auto-card {
+  width: 350px;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.auto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ------------------ SOBRE NOSOTROS ------------------ */
+
+.sobre-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  padding: 160px 80px 120px 80px;
+}
+
+.sobre-texto h1 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.texto1,
+.texto2 {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.sobre-imagen {
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-imagen img {
+  width: 620px;
+  height: 350px;
+  border-radius: 25px;
+  object-fit: cover;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+
+/* ------------------ MODELOS ------------------ */
+
+.catalogo {
+  display: flex;
+  justify-content: space-between;
+  padding: 180px 80px 30px 80px;
+}
+
+.catalogo-texto {
+  width: 40%;
+}
+
+.catalogo-texto h3 {
+  font-size: 36px;
+  color: #ff2a2a;
+}
+
+.catalogo-texto h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.catalogo-texto p {
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.boton-vermas {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+.catalogo-imagenes {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.catalogo-imagenes .fila {
+  display: flex;
+  gap: 20px;
+}
+
+.catalogo-imagenes img {
+  width: 280px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+
+/* ------------------ MODELOS → CATEGORÍAS ------------------ */
+
+.categorias {
+  padding: 60px 80px;
+}
+
+.categorias h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.categorias-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.categoria-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+}
+
+.categoria-card h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.categoria-card p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+
+/* ------------------ HISTORIA ------------------ */
+
+.pagina {
+  padding: 200px 80px 80px 80px;
+  position: relative;
+}
+
+.titulo-superior h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.contenido-wrap {
+  display: flex;
+  gap: 40px;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #ff6b40, #ff2a2a);
+  border-radius: 50%;
+}
+
+.contenido h1 {
+  font-size: 70px;
+  line-height: 0.9;
+  margin-bottom: 40px;
+}
+
+.contenido p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+
+/* ------------------ SERVICIOS Y OTROS ------------------ */
+
+.page {
+  padding: 200px 80px 80px 80px;
+  min-height: 100vh;
+}
+
+.page h1 {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #bbb;
+}
+
+
+/* ------------------ OTROS ------------------ */
+
+.otros-contenedor {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.otros-bloque {
+  background: #111;
+  padding: 25px;
+  border-radius: 18px;
+  width: 300px;
+}
+
+.otros-bloque h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.otros-bloque p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/* ------------------ AJUSTE DE IMÁGENES DE CATEGORÍAS (AÑADIDO) ------------------ */
+
+.categoria-card img {
+  width: 100%;
+  height: 160px;      /* Ajusta al cuadrado sin cambiar su tamaño */
+  object-fit: cover;  /* Recorta sin deformar */
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* ------------------ AJUSTE DE IMÁGENES DE CATEGORÍAS ------------------ */
+
+.categoria-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Botón para entrar a los catálogos */
+.boton-ir {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  color: white;
+  font-weight: 700;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+/* ------------------ CATÁLOGOS DETALLADOS ------------------ */
+
+.catalogo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.catalogo-item {
+  display: flex;
+  gap: 25px;
+  background: #111;
+  padding: 25px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.catalogo-item img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* Botón volver */
+.boton-volver {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  color: white;
+  font-weight: 700;
+  border-radius: 18px;
+  text-decoration: none;
+}
+
+/* Estilo de títulos dentro del catálogo */
+.catalogo-item h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+  /* ------------------ OTROS → FORMULARIO ------------------ */
+
+.formulario-contenedor {
+  margin-top: 80px;
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-contenedor h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-desc {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: white;
+}
+
+.campo textarea {
+  height: 120px;
+  resize: none;
+}
+
+.boton-enviar {
+  padding: 14px 30px;
+  border: none;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  color: white;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+}
