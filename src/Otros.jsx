@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
@@ -20,7 +19,13 @@ function Otros() {
     try {
       await axios.post("http://localhost:8080/api/solicitudes", formData);
       alert("Solicitud enviada correctamente!");
-      setFormData({ nombre: "", email: "", mensaje: "" });
+
+      setFormData({
+        nombre: "",
+        email: "",
+        mensaje: "",
+      });
+
     } catch (err) {
       alert("Error al enviar la solicitud");
     }
@@ -34,19 +39,17 @@ function Otros() {
       <div className="otros-contenedor">
 
         <div className="otros-bloque">
-          <h3>Preguntas Frecuentes</h3>
-          <p>
-            Encontrá respuestas a dudas comunes sobre modelos, turnos, garantías,
-            servicios y más.
-          </p>
+          <h3>Contacto</h3>
+          <p>Email: contacto@piucars.com</p>
+          <p>Teléfono: +54 11 3456 7890</p>
+          <p>Horarios: Lunes a Viernes — 9:00 a 18:00</p>
         </div>
 
         <div className="otros-bloque">
-          <h3>Información de Contacto</h3>
-          <p>
-            Podés comunicarte con nosotros para consultas personalizadas sobre
-            disponibilidad, precios y asistencia técnica.
-          </p>
+          <h3>Preguntas Frecuentes</h3>
+          <p>¿Aceptan autos usados como parte de pago? — Sí.</p>
+          <p>¿Se puede financiar un vehículo? — Sí, con varias opciones.</p>
+          <p>¿Hacen envíos a otras provincias? — Sí, con costo adicional.</p>
         </div>
 
         <div className="otros-bloque">
@@ -59,12 +62,11 @@ function Otros() {
 
       </div>
 
-      {/* ==== FORMULARIO DEBAJO ==== */}
       <div className="formulario-contenedor">
 
         <h2>Solicitar Información</h2>
         <p className="form-desc">
-          Desde aquí podés solicitar información de modelos, precios,
+          Desde acá podés solicitar información de modelos, precios,
           disponibilidad o coordinar una visita.
         </p>
 
@@ -110,47 +112,9 @@ function Otros() {
 
       </div>
 
+      <div className="barra-roja"></div>
     </div>
   );
 }
 
 export default Otros;
-=======
-import React from "react";
-
-export default function Otros() {
-  return (
-    <>
-      <div className="page">
-        <h1>OTROS</h1>
-
-        <div className="otros-contenedor">
-          <div className="otros-bloque">
-            <h3>Contacto</h3>
-            <p>Email: contacto@piucars.com</p>
-            <p>Teléfono: +54 11 3456 7890</p>
-            <p>Horarios: Lunes a Viernes — 9:00 a 18:00</p>
-          </div>
-
-          <div className="otros-bloque">
-            <h3>Preguntas Frecuentes</h3>
-            <p>¿Aceptan autos usados como parte de pago? — Sí.</p>
-            <p>¿Se puede financiar un vehículo? — Sí, con varias opciones.</p>
-            <p>¿Hacen envíos a otras provincias? — Sí, con costo adicional.</p>
-          </div>
-
-          <div className="otros-bloque">
-            <h3>Información Adicional</h3>
-            <p>
-              Para más información sobre servicios, modelos o historial del
-              concesionario, visite los apartados correspondientes del sitio.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="barra-roja"></div>
-    </>
-  );
-}
->>>>>>> b9f6a4327b7b2e6773b29d147d9f17cf953b85cd
