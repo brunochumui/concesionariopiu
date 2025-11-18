@@ -1,323 +1,421 @@
-body{
-   margin: 0; 
-   font-family: Arial, sans-serif; 
-   background: black;
-    color: white;
-  }
-  
-  
+/* ------------------ GENERAL ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Contenedor principal */
 .app {
-   width: 100%; 
-   min-height: 100vh;
-   }
-
-.navbar { 
-  position: absolute; /* fijo arriba a la derecha */ 
-  top: 40px; /* distancia desde arriba */ 
-  right: 10px; /* distancia desde la derecha */ 
-  width: 45vw; 
-
-  z-index: 1000; /* que esté por encima de todo */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 }
 
 
-.navbar ul { 
-  list-style: none; 
+/* ------------------ NAVBAR ------------------ */
+
+.navbar {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
   display: flex;
-   gap: 30px;
-    background: linear-gradient(90deg, #ff4b2b, #ff0000); /* gradiente rojo */
-     padding: 12px 25px;
-      border-radius: 20px;
-       margin: 0;
-        justify-content: space-around; 
-      }
-      
-      
-.navbar li { 
-  font-weight: 600; 
-  color: white; 
-  cursor: pointer;
-   transition: 0.3s;
-   }
-
-.navbar li:hover {
-   opacity: 0.8;
-   }
-
-.navbar li.active {
-   font-weight: 700; 
-} 
-
-
-.nombre {
-   display: flex; 
-   justify-content: space-between;
-    align-items: center;
-     padding: 250px 50px 50px 50px;
-      background: black; 
-    }
-    
-    
-.nombre-text {
-   max-width: 45%; 
-  }
-  
-  .nombre-text h1 { 
-    font-size: 3.5rem; 
-    font-weight: bold;
-     margin-left: 110px; /* lo empuja a la derecha */
-    }
-    
-    
-.nombre-text span { 
-  color: white;
-   font-size: 4rem; 
-   margin-left: 50px; 
-  }
-  
-  
-.nombre-text p {
-   margin-top: 20px;
-    font-size: 0.9rem;
-     line-height: 1.5; 
-  }
-  
-  /* Ajuste de imágenes */ 
-  
-  .autos { 
-    display: flex;
-     gap: 20px; 
-     justify-content: center;
-  align-items: center;
-  background-color: #000; /* opcional */
-  padding: 20px;
-    }
-    
-    .auto-card{
-       overflow:
-        hidden; border-radius: 20px; 
-        width: 360px;
-         height: 260px; 
-        } 
-        
-.auto-card img {
-      width: 100%; 
-     height: 100%;
-      object-fit: cover;
-           }
-  
-.angled-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
-           
-           
-           .barra-roja {
-             width: 90%;
-              height: 130px; 
-              background: linear-gradient(90deg, #ff4b2b, #ff0000); 
-position: relative; 
-border-top-right-radius: 100px; /* redondeo arriba */
-border-bottom-right-radius: 100px;/* redondeo abajo */ 
-margin-top: 3%; 
-clip-path: polygon( 0 0, /* esquina sup izq recta */ 90% 0, /* parte sup cerca del borde derecho */ 85% 100%, /* esquina inf der inclinada */ 0 100% /* esquina inf izq recta */ );
-} /* Explicación del clip: - 0 0 → esquina superior izquierda - 90% 0 → arriba casi al borde derecho - 100% 100% → esquina inferior derecha (forma diagonal) - 0% 100% → esquina inferior izquierda */
-
-
-/* ------------------ SOBRE NOSOTROS ------------------ */
-
-.sobre-nosotros {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200px 80px 100px 80px;
-  background-color: black;
-  color: white;
-  gap: 50px;
+  gap: 30px;
+  background: linear-gradient(90deg, #ff4b2b, #ff0000);
+  padding: 12px 30px;
+  border-radius: 22px;
 }
 
-.sobre-texto {
-  flex: 1;
+.navbar li {
+  font-weight: 700;
 }
 
-.sobre-texto h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.sobre-texto p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ccc;
-  margin-bottom: 20px;
-  width: 90%;
-}
-
-.sobre-imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.sobre-imagen img {
-  width: 600px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 25px;
-  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-  transition: 0.4s;
-}
-
-.sobre-imagen img:hover {
-  transform: scale(1.03);
-}
-
-/* Enlace sin subrayado */
 .navbar a {
   text-decoration: none;
   color: white;
 }
 
-/* Mantiene el color activo */
-.navbar li.active a {
-  font-weight: bold;
-  color: white;
+
+/* ------------------ BARRA ROJA UNIVERSAL ------------------ */
+
+.barra-roja {
+  width: 750px;
+  height: 82px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  border-top-right-radius: 36px;
+  position: relative;
+  margin-top: 100px;
+  left: 0;
 }
+
+
+/* ------------------ INICIO ------------------ */
+
+.nombre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 80px 80px 80px;
+}
+
+.nombre-text {
+  width: 45%;
+}
+
+.nombre-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.nombre-text span {
+  font-size: 4rem;
+}
+
+.nombre-text p {
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.autos {
+  display: flex;
+  gap: 25px;
+}
+
+.auto-card {
+  width: 350px;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.auto-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* ------------------ SOBRE NOSOTROS ------------------ */
 
 .sobre-nosotros {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "titulo texto1"
-    "imagen texto2";
-  gap: 40px 70px;
-  padding: 150px 80px 120px 80px;
-  background-color: black;
-  color: white;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  padding: 160px 80px 120px 80px;
 }
 
-/* Título grande */
 .sobre-texto h1 {
-  grid-area: titulo;
   font-size: 4rem;
   font-weight: 900;
-  margin: 0;
-  color: white;
 }
 
-/* Primer párrafo */
-.texto1 {
-  grid-area: texto1;
-  font-size: 1.05rem;
-  line-height: 1.7;
+.texto1,
+.texto2 {
+  font-size: 1.1rem;
   color: #ccc;
-  max-width: 90%;
-  text-align: left;
-  margin-left: 40px;
+  line-height: 1.7;
 }
 
-/* Imagen con recorte inclinado */
 .sobre-imagen {
-  grid-area: imagen;
   display: flex;
-  justify-content: flex-start;
-  margin-top: -10px;
+  justify-content: center;
 }
 
 .sobre-imagen img {
-  width: 650px;
-  height: 360px;
-  object-fit: cover;
+  width: 620px;
+  height: 350px;
   border-radius: 25px;
+  object-fit: cover;
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
-  transition: 0.4s ease;
-}
-
-.sobre-imagen img:hover {
-  transform: scale(1.03);
-}
-
-/* Segundo bloque de texto */
-.texto2 {
-  grid-area: texto2;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #ccc;
-  max-width: 90%;
-  margin-left: 40px;
 }
 
 
-/* Sección catálogos */
+/* ------------------ MODELOS ------------------ */
+
 .catalogo {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 120px 100px 0 100px; /* empuja todo debajo del navbar */
-  color: white;
-  position: relative;
+  padding: 180px 80px 30px 80px;
 }
 
-/* Texto */
 .catalogo-texto {
   width: 40%;
 }
 
 .catalogo-texto h3 {
   font-size: 36px;
-  color: #e52d27;
+  color: #ff2a2a;
 }
 
 .catalogo-texto h1 {
   font-size: 60px;
   font-weight: 900;
+}
+
+.catalogo-texto p {
   margin-top: 10px;
+  color: #ccc;
+  line-height: 1.6;
 }
 
 .boton-vermas {
-  background: linear-gradient(90deg, #f72b1e, #ff0000);
-  border: none;
-  padding: 12px 30px;
   margin-top: 20px;
-  font-size: 18px;
-  border-radius: 30px;
+  padding: 12px 30px;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  border: none;
   cursor: pointer;
+  color: white;
+  font-weight: 700;
 }
 
-/* Imágenes */
 .catalogo-imagenes {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-left: 80px;
+  gap: 20px;
 }
 
 .catalogo-imagenes .fila {
   display: flex;
-  justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .catalogo-imagenes img {
-  width: 290px;
+  width: 280px;
   height: 200px;
-  object-fit: cover;
   border-radius: 20px;
+  object-fit: cover;
 }
 
-/* Barra roja más grande */
-.barra-rojamod {
-  width: 80%;
-  height: 100px;
-  background: linear-gradient(90deg, #f72b1e, #ff0000);
-  border-radius: 10px;
-  margin-top: 60px;
-  position: absolute;
-  bottom: -130px;
+
+/* ------------------ MODELOS → CATEGORÍAS ------------------ */
+
+.categorias {
+  padding: 60px 80px;
 }
+
+.categorias h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.categorias-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.categoria-card {
+  background: #111;
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+}
+
+.categoria-card h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.categoria-card p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+
+/* ------------------ HISTORIA ------------------ */
+
+.pagina {
+  padding: 200px 80px 80px 80px;
+  position: relative;
+}
+
+.titulo-superior h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.contenido-wrap {
+  display: flex;
+  gap: 40px;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #ff6b40, #ff2a2a);
+  border-radius: 50%;
+}
+
+.contenido h1 {
+  font-size: 70px;
+  line-height: 0.9;
+  margin-bottom: 40px;
+}
+
+.contenido p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+
+/* ------------------ SERVICIOS Y OTROS ------------------ */
+
+.page {
+  padding: 200px 80px 80px 80px;
+  min-height: 100vh;
+}
+
+.page h1 {
+  font-size: 70px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #bbb;
+}
+
+
+/* ------------------ OTROS ------------------ */
+
+.otros-contenedor {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.otros-bloque {
+  background: #111;
+  padding: 25px;
+  border-radius: 18px;
+  width: 300px;
+}
+
+.otros-bloque h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.otros-bloque p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/* ------------------ AJUSTE DE IMÁGENES DE CATEGORÍAS (AÑADIDO) ------------------ */
+
+.categoria-card img {
+  width: 100%;
+  height: 160px;      /* Ajusta al cuadrado sin cambiar su tamaño */
+  object-fit: cover;  /* Recorta sin deformar */
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* ------------------ AJUSTE DE IMÁGENES DE CATEGORÍAS ------------------ */
+
+.categoria-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+/* Botón para entrar a los catálogos */
+.boton-ir {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  color: white;
+  font-weight: 700;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+/* ------------------ CATÁLOGOS DETALLADOS ------------------ */
+
+.catalogo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.catalogo-item {
+  display: flex;
+  gap: 25px;
+  background: #111;
+  padding: 25px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.catalogo-item img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* Botón volver */
+.boton-volver {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #ff6b40, #ff2a2a);
+  color: white;
+  font-weight: 700;
+  border-radius: 18px;
+  text-decoration: none;
+}
+
+/* Estilo de títulos dentro del catálogo */
+.catalogo-item h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+  
