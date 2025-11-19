@@ -40,6 +40,14 @@ html, body {
   border-radius: 22px;
 }
 
+.navbar a:hover {
+  color: #ffe0e0;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
 .navbar li {
   font-weight: 700;
 }
@@ -412,6 +420,10 @@ html, body {
   border-radius: 18px;
   text-decoration: none;
 }
+
+/* Hover de la barra*/
+
+
 
 /* Estilo de títulos dentro del catálogo */
 .catalogo-item h2 {
